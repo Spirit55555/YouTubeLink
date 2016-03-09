@@ -1,0 +1,44 @@
+main: dk.spirit55555.youtubelink.YouTubeLink
+name: ${project.name}
+version: ${project.version}
+description: ${project.description}
+author: Anders G. Jørgensen
+website: http://spirit55555.dk
+permissions:
+  youtubelink.*:
+    description: Gives access to all YouTubeLink permissions.
+    children:
+      youtubelink.show: true
+      youtubelink.change: true
+      youtubelink.sign: true
+      youtubelink.admin: true
+  youtubelink.show:
+    description: Allows you to get a link to other players YouTube channel.
+    default: true
+  youtubelink.change:
+    description: Allows you to change your own YouTube channel.
+    default: op
+  youtubelink.admin:
+    description: Allows you to change other players YouTube channel, reload the config files and view the plugin version.
+    default: op
+commands:
+  youtube:
+    description: Get a link to a players YouTube channel.
+    usage: /<command> <player>
+    aliases: yt
+    permission: youtubelink.show
+  youtubechannel:
+    description: Change your YouTube channel. Set the channel to "none" if you want to remove it.
+    usage: /<command> <channel>
+    aliases: ytc
+    permission: youtubelink.change
+  youtubeadmin:
+    description: Change other players YouTube channel, reload the config files and show the version.
+    usage: |
+      /<command> change <player> <channel> - Change a players channel name.
+      /<command> remove <player> - Remove a player from the config file.
+      /<command> reload - Reload the config files
+      /<command> permissions - Show the permission nodes
+      /<command> version - Show plugin version
+    aliases: yta
+    permission: youtubelink.admin

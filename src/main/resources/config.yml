@@ -1,0 +1,23 @@
+prefix: "&f[&4YouTube&f] &r"
+messages:
+  version: "version %s"
+  reload: "has been reloaded."
+  permissions: "Available permissions:"
+  show:
+    user: "%s - https://youtube.com/user/%s"
+    channel: "%s - https://youtube.com/channel/%s"
+  valid: "Please type a vaild channel name."
+  add: "You have not configured your channel yet. Type /ytc CHANNEL to set it."
+  only-online:
+    get: "You can only get the channel of an online player."
+    change: "You can only change the channel of an online player."
+    remove: "You can only remove the channel of an online player."
+  no-channel:
+    player: "%s does not have a channel."
+    admin: "%s does not have a channel configured."
+  changed:
+    player: "Your channel has been changed to: %s"
+    admin: "%s's channel has been changed to: %s"
+  removed:
+    player: "Your channel has been removed."
+    admin: "%s's channel has been removed."
